@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+    <div class="form-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
+            <form class="form-horizontal" action="login" method="post">
+              <div class="heading">登录页面</div>
+              <div class="form-group">
+                <i class="fa fa-user"></i><input required name="username" type="text" class="form-control" placeholder="用户名">
+              </div>
+              <div class="form-group">
+                <i class="fa fa-lock"></i><input required name="password" type="password" class="form-control" placeholder="密码">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-default"><i class="fa fa-arrow-right">登录</i></button>
+                <span><p style="color: red" th:text="${msg}"></p></span>
+                <span>没有账号？<a href="toRegister" class="create_account">前往注册</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
